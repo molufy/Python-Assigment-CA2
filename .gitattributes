@@ -1,8 +1,10 @@
-import pandas as pd # importing Pandas library as 'pd' for saving space and less typing
+# Piotr Moleda
 
-import numpy as np # importing Numpy library as 'np' for saving sapce and less typing
+import pandas as pd 
 
-import matplotlib.pyplot as plt # same with matplot library - covert name to 'plt'
+import numpy as np 
+
+import matplotlib.pyplot as plt 
 
 
 database1 = {
@@ -57,6 +59,7 @@ dbase4['Department'] = dbase4['Product'].map(department_map)
 ax = dbase4.plot(x='Product', y=['Purchase_price', 'Sale_price'], kind='bar')
 ax.set_ylabel('Price')
 ax.set_title('Purchase and Sale Comparison')
+plt.show()
 
 class Transaction:
   def __init__(self, TR_ID:str, Product:str, Quantity:int,
@@ -123,3 +126,7 @@ for transaction in transactions:
     print('---------------------------------------------------------------------------------------------------')
     print(f'Product TR_ID {tr_id} is loss making \u274c')  
     print(' ')
+
+
+
+
